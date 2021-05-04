@@ -62,7 +62,7 @@
 * A CPU has low latency and good throughput (compute a job as quickly as possible), whereas a GPU has high throughput and good latency (compute as many jobs as possible). 
 </script></section>
 <section data-markdown><script type="text/template">
-<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanGPUCourse/master/Images/gpuimage.png" /><br />
+<img src="https://raw.githubusercontent.com/levlafayette/SpartanGPUCourse/master/Images/gpuimage.png" /><br />
 Image from Felipe A. Cruz, GeForce GTX 280
 </script></section>
 <section data-markdown><script type="text/template">
@@ -72,7 +72,7 @@ Image from Felipe A. Cruz, GeForce GTX 280
 * Several APIs; CUDA, OpenACC, OpenMP, and OpenCL.
 </script></section>
 <section data-markdown><script type="text/template">
-<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanGPUCourse/master/Images/Natoli-CPUvGPU-peak-DP-600x-300x232.png" /> <img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanGPUCourse/master/Images/Natoli-CPUvGPU-peak-mem-bw-600x-300x241.png" /><br />
+<img src="https://raw.githubusercontent.com/levlafayette/SpartanGPUCourse/master/Images/Natoli-CPUvGPU-peak-DP-600x-300x232.png" /> <img src="https://raw.githubusercontent.com/levlafayette/SpartanGPUCourse/master/Images/Natoli-CPUvGPU-peak-mem-bw-600x-300x241.png" /><br />
 Images from HPCWire `https://www.hpcwire.com/2016/08/23/2016-important-year-hpc-two-decades/`
 </script></section>
 <section data-markdown><script type="text/template">
@@ -111,7 +111,7 @@ Images from HPCWire `https://www.hpcwire.com/2016/08/23/2016-important-year-hpc-
 <section data-markdown><script type="text/template">
 ### Part 1: CUDA and Slurm
 * A number of applications on Spartan have already been compiled with CUDA-specific toolchains
-* These are like any other job submission with the following caveats: (1) You will need to specifiy the partition that you are using., (2) You will need to specify the account (projectID) that you are using for the gpgpu partitions., (3) You will need to request a generic resource for your job script. 
+* These are like any other job submission with the following caveats: (1) You will need to specify the partition that you are using., (2) You will need to specify the account (projectID) that you are using for the gpgpu partitions., (3) You will need to request a generic resource for your job script. 
 </script></section>
 <section data-markdown><script type="text/template">
 ### Part 1: Example Slurm Scripts
@@ -120,12 +120,12 @@ Images from HPCWire `https://www.hpcwire.com/2016/08/23/2016-important-year-hpc-
 </script></section>
 <section data-markdown><script type="text/template">
 ### Part 2: Introduction to OpenACC
-* The general structure of OpenACC is astoundingly simple; see `/usr/local/common/OpenACC`. It combines the process of decomposition on a hetrogenous system with pragmas. However OpenACC only works with a limited range of compilers (on Spartan, PGI compilers only, and GCC 6+). API is for C, C++, and Fortran.
+* The general structure of OpenACC is astoundingly simple; see `/usr/local/common/OpenACC`. It combines the process of decomposition on a heterogeneous system with pragmas. However OpenACC only works with a limited range of compilers (on Spartan, PGI compilers only, and GCC 6+). API is for C, C++, and Fortran.
 </script></section>
 <section data-markdown><script type="text/template">
 ### Part 2: Portable and Flexible
 * OpenACC directives are portable; across operating systems, host CPUs, and accelerators. Can be used  with GPU accelerated libraries, explicit parallel programming languages (e.g., CUDA), MPI, and OpenMP, all in the same program.
-* As with OpenMP and OpenMPI directives, the pragmas in OpenACC are treated as comments by compilers that do not use them. 
+* As with OpenMP directives, the pragmas in OpenACC are treated as comments by compilers that do not use them. 
 </script></section>
 <section data-markdown><script type="text/template">
 ### Part 2: Profiling

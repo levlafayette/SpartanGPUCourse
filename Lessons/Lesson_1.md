@@ -19,7 +19,7 @@
 -- *Slide End* --
 
 -- *Slide* --
-<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanGPUCourse/master/Images/gpuimage.png" /><br />
+<img src="https://raw.githubusercontent.com/levlafayette/SpartanGPUCourse/master/Images/gpuimage.png" /><br />
 Image from Felipe A. Cruz, GeForce GTX 280
 -- *Slide End* --
 
@@ -31,7 +31,7 @@ Image from Felipe A. Cruz, GeForce GTX 280
 -- *Slide End* --
 
 -- *Slide* --
-<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanGPUCourse/master/Images/Natoli-CPUvGPU-peak-DP-600x-300x232.png" /> <img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanGPUCourse/master/Images/Natoli-CPUvGPU-peak-mem-bw-600x-300x241.png" /><br />
+<img src="https://raw.githubusercontent.com/levlafayette/SpartanGPUCourse/master/Images/Natoli-CPUvGPU-peak-DP-600x-300x232.png" /> <img src="https://raw.githubusercontent.com/levlafayette/SpartanGPUCourse/master/Images/Natoli-CPUvGPU-peak-mem-bw-600x-300x241.png" /><br />
 Images from HPCWire `https://www.hpcwire.com/2016/08/23/2016-important-year-hpc-two-decades/`
 -- *Slide End* --
 
@@ -77,7 +77,7 @@ Images from HPCWire `https://www.hpcwire.com/2016/08/23/2016-important-year-hpc-
 -- *Slide* --
 ### Part 1: CUDA and Slurm
 * A number of applications on Spartan have already been compiled with CUDA-specific toolchains
-* These are like any other job submission with the following caveats: (1) You will need to specifiy the partition that you are using., (2) You will need to specify the account (projectID) that you are using for the gpgpu partitions., (3) You will need to request a generic resource for your job script. 
+* These are like any other job submission with the following caveats: (1) You will need to specify the partition that you are using., (2) You will need to specify the account (projectID) that you are using for the gpgpu partitions., (3) You will need to request a generic resource for your job script. 
 -- *Slide End* --
 
 -- *Slide* --
@@ -88,13 +88,13 @@ Images from HPCWire `https://www.hpcwire.com/2016/08/23/2016-important-year-hpc-
 
 -- *Slide* --
 ### Part 2: Introduction to OpenACC
-* The general structure of OpenACC is astoundingly simple; see `/usr/local/common/OpenACC`. It combines the process of decomposition on a hetrogenous system with pragmas. However OpenACC only works with a limited range of compilers (on Spartan, PGI compilers only, and GCC 6+). API is for C, C++, and Fortran.
+* The general structure of OpenACC is astoundingly simple; see `/usr/local/common/OpenACC`. It combines the process of decomposition on a heterogeneous system with pragmas. However OpenACC only works with a limited range of compilers (on Spartan, PGI compilers only, and GCC 6+). API is for C, C++, and Fortran.
 -- *Slide End* --
 
 -- *Slide* --
 ### Part 2: Portable and Flexible
 * OpenACC directives are portable; across operating systems, host CPUs, and accelerators. Can be used  with GPU accelerated libraries, explicit parallel programming languages (e.g., CUDA), MPI, and OpenMP, all in the same program.
-* As with OpenMP and OpenMPI directives, the pragmas in OpenACC are treated as comments by compilers that do not use them. 
+* As with OpenMP directives, the pragmas in OpenACC are treated as comments by compilers that do not use them. 
 -- *Slide End* --
 
 -- *Slide* --
